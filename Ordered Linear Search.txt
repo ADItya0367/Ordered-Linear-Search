@@ -1,0 +1,41 @@
+Ordered Linear search - This is a type of linear searching Teachnique in which the elements are already sorted . So we do not have to check out the whole array if the element exists or not . We just check that if any element exists which is greater then the target element then we simply return -1 without seeing the array for any other value 
+
+** See the Code To understand well;
+
+
+#include<iostream>
+using namespace std;
+
+int OrderedSearch(int nums[],int n,int target)
+{
+ for(int i=0;i<=n;i++)
+{
+  if(nums[i]==target)
+{
+ return i;
+}
+else if(nums[i]>target)
+{
+  return -1;
+}
+}
+return -1;
+
+};
+
+int main()
+{
+ int array={1,3,5,7,9};
+ int n=sizeof(array)/sizeof(array[0]);
+ int target=5;
+ int result=OrderedSearch(array,n,5);
+ if(result==-1)
+{
+  return -1;
+}
+else 
+{
+  return result;
+}
+  return -1;
+}
